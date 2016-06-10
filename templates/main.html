@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" id="main_button">Yaroslav Berejnoi</a>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li id="project_button"><a href="#projects">Projects</a></li>
+				<li id="photo_button"><a href="#photo">Photography</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li id="contact_button"><a href="#contact">Contact</a></li>
+				<button type="button" class="btn button_scheme navbar-btn" id="sign_in" data-toggle="modal" data-target="#myModal">Sign in</button>
+	</nav>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Admin login</h4>
+      </div>
+      <div class="modal-body">
+        <p>All the edit/add buttons are locked for the admin. You must login to use them.</p>
+        <form method= post action="login">
+        	<dl>
+        		<dt><label for="username">Username</label></dt>
+        		<dd><input id="username" name="username" type="text" value=""></dd>
+        		<dt><label for="password">Password</label></dt>
+        		<dd><input id="password" name="password" type="password" value=""></dd>
+        	</dl>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<body>
+	<div class="container well" id="intro_tab">
+		<div class="row">
+			<div class="col-md-5">
+				<img class="profile_pic" src="{{ url_for('static', filename='images/keyboard.jpg') }}">
+			</div>
+			<div class="col-md-7 text-center">
+				<h1>Hello, my name is Yaroslav Berejnoi</h1>
+				<p>I am a Computer Science student at the University of Houston looking to make it big in the programming world. Feel free to take a look at any of my projects, art, or whatever else this portfolio will hold in the future. Thanks! </p>
+				<br>
+				<hr class="style18">
+				<br>
+				<span class="social_bar">
+					<button class="social_button"><a id="github" href="https://github.com/YaroBear"><i class="fa fa-github-alt fa-3x"></i></a></button>
+					<button class="social_button"><a id="linkedin" href="https://www.linkedin.com/in/yaroslav-berejnoi-190b03a3"><i class="fa fa-linkedin fa-3x"></i></a></button>
+					<button class="social_button"><a href="https://www.freecodecamp.com/yarobear"><img id="code_camp" src="{{ url_for('static', filename='images/fcc.png') }}"></a></button>
+					<button class="social_button"><a id="gplus" href="https://plus.google.com/u/0/101266061863360382867/posts"><i class="fa fa-google-plus fa-3x"></i></a></button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="container well" id="projects_tab">
+		<div class="row">
+			<div class="col-md-12">
+				<table class="table table-hover" id="projects_tab">
+					<caption><h3>Projects</h3></caption>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+						<th>Dependencies</th>
+						<th>Language</th>
+					</tr>
+					<tr>
+						<td><a href="https://github.com/YaroBear/solstice">Solstice</a></td>
+						<td>Simple game submitted for a 24 hour competition based on a snow theme<a href="http://fresh4less.org/winter-jam-2015/"> Fresh4less Winter Jam</a></td>
+						<td><a href="http://www.pygame.org/download.shtml">py-game </a><a href="http://www.numpy.org/">NumPy</a></td>
+						<td>Python</td>
+					</tr>
+					<tr>
+						<td>Fire Simulation</td>
+						<td>Watch fire grow in a cellular-like manner. Challenge from Stanford's <a href="http://nifty.stanford.edu/">Nifty Assignments</a></td>
+						<td><a href="http://matplotlib.org/">Matplotlib</a></td>
+						<td>Python</td>
+					</tr>
+					<tr>
+						<td><a href="http://codepen.io/yarob/pen/NNmJYR">Claude Shannon Tribute</a></td>
+						<td>Static html site with bootstrap as part of the first project for <a href=https://www.freecodecamp.com>Free Code Camp</a></td>
+						<td><a href="https://getbootstrap.com/">Bootstrap</a></td>
+						<td>HTML/CSS</td>
+					</tr>
+					<tr>
+						<td><button class="btn button_scheme">Edit</button></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<div class="container well text-center" id="photo_tab">
+		<h3>35mm film photography</h3>
+		<div class="col-md-6 col-md-6">
+			<a href="{{ url_for('static', filename='images/chives.jpg') }}" class="thumbnail">
+				<img src="{{ url_for('static', filename='images/chives.jpg') }}">
+				<div class="caption text-center">
+					<h3>Young chives</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-6 col-md-6">
+			<a href="{{ url_for('static', filename='images/pots.jpg') }}" class="thumbnail">
+				<img src="{{ url_for('static', filename='images/pots.jpg') }}">
+				<div class="caption text-center">
+					<h3>Pots on rainy day</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-md-6 col-md-6">
+			<a href="{{ url_for('static', filename='images/shed.jpg') }}" class="thumbnail">
+				<img src="{{ url_for('static', filename='images/shed.jpg') }}">
+				<div class="caption text-center">
+					<h3>Forgotten cabin</h3>
+				</div>
+			</a>
+		</div>
+	<div class="col-md-6 col-md-6">
+			<a href="{{ url_for('static', filename='images/building.jpg') }}" class="thumbnail">
+				<img src="{{ url_for('static', filename='images/building.jpg') }}">
+				<div class="caption text-center">
+					<h3>Abondoned car parts depot</h3>
+				</div>
+			</a>
+		</div>
+	</div>
+
+	<div class="container well" id="contact_tab">
+		<form>
+			<div class="form-group">
+				<label for="senderEmail">Email address</label>
+				<input type="email" class="form-control" id="senderEmail" placeholder="Email" required>
+			</div>
+			<div class="form-group">
+				<label for="senderPhone">Phone Number</label>
+				<input type="tel" class="form-control" id="senderPhone" placeholder="xxx-xxx-xxxx">
+			</div>
+			<div class="form-group">
+				<label for="senderMessage">Message</label>
+				<br>
+				<textarea id="senderMessage" placeholder="Type message here" required></textarea>
+			</div>
+			<button type="submit" class="btn button_scheme" data-toggle="modal" data-target="#thanks">Submit</button>
+		</form>
+	</div>
+
+	<div class="modal fade" id="thanks" tabindex="-1" role="dialog" aria-labelledby="thanksLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="thanksLabel">Thank You!</h4>
+      </div>
+      <div class="modal-body">
+        <p>Got your message, I'll reply to you as soon as I can.</p>
+        <p>- Yaroslav Berejnoi</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

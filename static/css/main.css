@@ -1,0 +1,83 @@
+body {
+	background-color: #76CCAF !important;
+	padding-top: 70px;
+}
+
+p {
+	font-size: 18px;
+}
+
+.banner {
+	color: white;
+	font-size: 18px;
+}
+
+.button_scheme {
+	margin-top: 8px;
+	margin-right: 24px;
+	background-color: #7EAEDE;
+	color: white;
+}
+
+.profile_pic {
+	border-radius: 50%;
+	border-color: #7EAEDE;
+	border-style: solid;
+	border-width: 5px;
+	width: 350px;
+	height: 350px;
+	display: block;
+	margin: auto;
+}
+
+hr.style18 { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+} 
+hr.style18:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+.social_button {
+	width: 60px;
+	height: 60px;
+	border: none;
+	background-color: transparent;
+	color: gray;
+	margin: 15px;
+}
+
+#code_camp {
+	width: 60px;
+	height: 60px;
+	border-radius:50%;
+	margin-bottom: 20px;
+	margin-left:-10px;
+}
+
+#gplus {
+	color: red;
+}
+
+#linkedin {
+	color: #0077B5;
+}
+
+#github {
+	color: black;
+}
+
+#senderMessage {
+	height: 150px;
+	width: 100%;
+}
