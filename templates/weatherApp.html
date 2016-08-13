@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<script type="text/javascript" src="{{ url_for('static', filename='js/weatherApp.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/weatherApp.css') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animatedWeather.css') }}">
+	</head>
+
+	<body>
+		<div class="weather-box">
+			<div class="info-panel">
+				<h1>Weather</h1>
+				<h2 id = "location"></h2>
+				<h2 id = "weather"></h2>
+				<table>
+					<tr>
+						<th>Current Temp</th>
+						<th>Min</th>
+						<th>Max</th>
+						<th>Condition</th>
+						<th>Humidity</th>
+						<th>Sunrise</th>
+						<th>Sunset</th>
+					</tr>
+					<tr>
+						<td id ="current"></td>
+						<td id ="min"></td>
+						<td id ="max"></td>
+						<td id="condition"></td>
+						<td id="humidity"></td>
+						<td id="sunrise"></td>
+						<td id="sunset"></td>
+					</tr>
+					</table>
+					<button id="change_to_c">C</button>
+					<button id="change_to_f">F</button>
+					<button id="clear_cache">Clear Cache</button>
+				</div>
+			<div class="weather-panel">
+				<div class="sun-times">
+					<div class="sun-path">
+						<div class="sun-animation">
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer id="sunrise-footer">Left</footer>
+			<footer id="sunset-footer">Right</footer>
+		</div>
+	</body>
+</html>
