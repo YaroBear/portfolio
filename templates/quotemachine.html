@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen+Mono' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/quoteMachine.css') }}">
+		<script type="text/javascript" src="{{ url_for('static', filename='js/quoteMachine.js') }}"></script>
+	</head>
+
+	<body id="main">
+	  <div class="container quote-box text-center well">
+	    <h1 id="title">Random Quote Machine</h1>
+	    <p id="quote-content">Content goes here</p>
+	    <footer><cite id="quote-author">Author</cite></footer>
+	    <br>
+	    <button class="btn btn-primary" id="new-quote">New quote</button>
+	    <button class="btn btn-primary" id="twitter"><a href="" target="_blank">Share on twitter</a></button>
+	  </div>
+	</body>
+</html>
