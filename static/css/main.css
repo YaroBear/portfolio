@@ -7,19 +7,29 @@ p {
 	font-size: 18px;
 }
 
+.form-error {
+	color: red;
+	font-size: 16px;
+}
+
+#senderMessage {
+	height: 150px;
+	width: 100%;
+}
+
 .banner {
 	color: white;
 	font-size: 18px;
 }
 
-.button_scheme {
+.button-scheme {
 	margin-top: 8px;
 	margin-right: 24px;
 	background-color: #7EAEDE;
 	color: white;
 }
 
-.profile_pic {
+#profile-pic {
 	border-radius: 50%;
 	border-color: #7EAEDE;
 	border-style: solid;
@@ -48,7 +58,7 @@ hr.style18:before {
   border-radius: 20px; 
 }
 
-.social_button {
+.social-button {
 	width: 60px;
 	height: 60px;
 	border: none;
@@ -57,7 +67,7 @@ hr.style18:before {
 	margin: 15px;
 }
 
-#code_camp {
+#code-camp {
 	width: 60px;
 	height: 60px;
 	border-radius:50%;
@@ -75,9 +85,4 @@ hr.style18:before {
 
 #github {
 	color: black;
-}
-
-#senderMessage {
-	height: 150px;
-	width: 100%;
 }
