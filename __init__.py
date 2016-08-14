@@ -19,10 +19,11 @@ mail = Mail(app)
 @app.route('/contact/', methods = ['POST', 'GET'])
 def contact():
 	form = ContactForm()
+	section = 'contact_tab' #reloaded page scrolls back down to contact form
 	if request.method == "POST":
 		if form.validate() == False:
 			flash("All fields required:")
-			return render_template("main.html", form = form)
+			return render_template("main.html", form = form, section = section)
 		else:
 			name = request.form['senderName']
 			email = request.form['senderEmail']

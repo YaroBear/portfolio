@@ -203,6 +203,13 @@
 		</form>
 	</div>
 
+	{% if section %}
+		<script>
+		$(function() {
+			window.location.hash = "#{{ section }}";
+		});
+		</script>
+	{% endif %}
 	
 
 
