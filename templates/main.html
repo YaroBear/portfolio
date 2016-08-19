@@ -89,44 +89,18 @@
 						<th>Dependencies</th>
 						<th>Language</th>
 					</tr>
+					
+					{% for row in rows %}
 					<tr>
-						<td><a href="weather-app">Weather App</a></td>
-						<td>2 of 4 intermediate front end projects for Free Code Camp. Polls your location based on your ip, and fetches weather information based on a zipcode</a></td>
-						<td></td>
-						<td>HTML/CSS javascript</td>
+						<td><a href="{{row['link']}}">{{row['name']}}</a></td>
+						<td>{{row['description']}}</a></td>
+						<td>{{row['dependencies']}}</td>
+						<td>{{row['language']}}</td>
 					</tr>
+					{% endfor %}
+
 					<tr>
-						<td><a href="random-quote-machine">Random quote machine</a></td>
-						<td>Simple demonstration on API use, JSON, and twitter composer. 1 of 4 intermediate front end projects for <a href=https://www.freecodecamp.com>Free Code Camp</a></td>
-						<td><a href="https://getbootstrap.com/">Bootstrap</a></td>
-						<td>HTML/CSS javascript</td>
-					</tr>
-					<tr>
-						<td><a href="https://github.com/YaroBear/solstice">Solstice</a></td>
-						<td>Simple "game" submitted for a 24 hour competition based on a snow theme<a href="http://fresh4less.org/winter-jam-2015/"> Fresh4less Winter Jam</a></td>
-						<td><a href="http://www.pygame.org/download.shtml">py-game </a><a href="http://www.numpy.org/">NumPy</a></td>
-						<td>Python</td>
-					</tr>
-					<tr>
-						<td>Fire Simulation</td>
-						<td>Watch fire grow in a cellular-like manner. Challenge from Stanford's <a href="http://nifty.stanford.edu/">Nifty Assignments</a></td>
-						<td><a href="http://matplotlib.org/">Matplotlib</a></td>
-						<td>Python</td>
-					</tr>
-					<tr>
-						<td><a href="http://codepen.io/yarob/pen/NNmJYR">Claude Shannon Tribute</a></td>
-						<td>Static html site with bootstrap as part of the first project for <a href=https://www.freecodecamp.com>Free Code Camp</a></td>
-						<td><a href="https://getbootstrap.com/">Bootstrap</a></td>
-						<td>HTML/CSS</td>
-					</tr>
-					<tr>
-						<td><a href="https://github.com/YaroBear/portfolio">This website</a></td>
-						<td>Track progress of my portfolio website as I add more features and pick up more of the stack</td>
-						<td><a href="https://getbootstrap.com/">Bootstrap </a><a href="http://flask.pocoo.org/">Flask</a></td>
-						<td>HTML/CSS javascript python</td>
-					</tr>
-					<tr>
-						<td><button class="btn button-scheme">Edit</button></td>
+						<td><a href="edit-projects"><button class="btn button-scheme">Edit</button></a></td>
 					</tr>
 				</table>
 			</div>
