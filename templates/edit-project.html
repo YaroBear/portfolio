@@ -1,27 +1,63 @@
+<style>
+	#description-box {
+		width: 100%;
+		height: 100%;
+	}
+</style>
+
 <html>
 <head>
 	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 	<body>
-		<form action = "{{url_for('add_project')}}" method= "POST">
-			<h2>Add Project</h2>
-			Name<br><input type = "text" name = "project"></br>
-			URL<br><input type = "text" name = "link"></br>
-			Description<br><input type = "text" name = "description"></br>
-			Dependencies<br><input type = "text" name = "dependencies"></br>
-			Language<br><input type = "text" name = "language"></br>
-			<br><input type = "submit" class = "btn btn-primary" value = "submit" method='POST'></br>
-		</form>
+		<div class="container well" id="projects_tab">
+			<div class="row">
+				<div class="col-md-12">
+					<table class="table table-hover" id="projects_tab">
+						<caption><h3>Projects</h3></caption>
+						<tr>
+							<th>Name</th>
+							<th>Description</th>
+							<th>Dependencies</th>
+							<th>Language</th>
+							<th>Edit</th>
+						</tr>
 
-		<form action = "{{url_for('delete_project')}}" method = "POST">
-			<h2>Delete Current Projects</h2>
-			{% for row in rows %}
-			<tr>
-				<input value="{{row['name']}}" type = "hidden" name="project">
-				<td>{{row['name']}}</td><br><button type="submit" class = "btn btn-danger">Delete</button></br>
-			</tr>
-			{% endfor %}
-		</form>
-	<h3><a href="/">Return to Main Page</h3>
+						{% for row in rows %}
+						<tr>
+							<td><a href="{{row['link']}}">{{row['name']}}</a></td>
+							<td>{{row['description']}}</a></td>
+							<td>{{row['dependencies']}}</td>
+							<td>{{row['language']}}</td>
+							<td>
+								<form action = "{{url_for('delete_project')}}" method = "POST">
+								<input value="{{row['name']}}" type = "hidden" name="project"><button type="submit" class = "btn btn-danger">Delete</button>
+								</form>
+								<form>
+								<button type="submit" class = "btn btn-warning">Modify</button>
+								</form>
+							</td>
+						</tr>
+						{% endfor %}
+
+						<tr>
+							<form action = "{{url_for('add_project')}}" method= "POST">
+							<td>
+								<input type = "text" name = "project">
+								<br><strong>Relative URL</strong><br><input type = "text" name = "link">
+							</td>
+							<td><textarea name = "description" id="description-box"></textarea></td>
+							<td><input type = "text" name = "dependencies"></td>
+							<td><input type = "text" name = "language"></td>
+							<td><input type = "submit" class = "btn btn-primary" value = "Submit" method='POST'></td>
+							</form>
+						</tr>
+						<tr>
+							<td><h4><a href="/">Return to Main Page</h3></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
